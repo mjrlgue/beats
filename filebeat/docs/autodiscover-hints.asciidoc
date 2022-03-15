@@ -289,7 +289,7 @@ filebeat.autodiscover:
       hints.default_config:
         type: container
         paths:
-          - /var/log/containers/*-${data.container.id}.log  # CRI path
+          - /var/lib/docker/containers/*/*.log  # CRI path
 -----
 
 You can also disable default settings entirely, so only containers labeled with `co.elastic.logs/enabled: true`
